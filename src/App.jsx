@@ -9,11 +9,15 @@ function App() {
     setCarrito(carrito+1)
     console.log(carrito)
   }
+  const eliminarDelCarrito = () =>{
+    carrito!=0?setCarrito(carrito-1):carrito;
+    console.log(carrito)
+  }
     
     return (
         <> 
           <NavBar carrito = {carrito}></NavBar>
-          <ItemListContainer mensaje ='Bienvenidos!' fn = {agregarAlCarrito}></ItemListContainer>
+          <ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito} eliminarDelCarrito = {eliminarDelCarrito}></ItemListContainer>
         </>
 
     )

@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#nombreTienda{
+  font-size: 2rem;
+  position: absolute;
+  left: 5%;
+}
+
+#logoCarrito{
+  font-size: 1.5rem;
+  position: absolute;
+  right: 5%;
+}

@@ -2,10 +2,10 @@ import 'react'
 
 function NavBar({carrito}){
   return(
-    <>
-      <h1>Este es mi NavBar</h1>
-      <p>🛒{carrito}</p>
-    </>
+    <div className='navbar'>
+      <h1 id='nombreTienda'>Este es mi NavBar</h1>
+      <p id='logoCarrito'>🛒{carrito}</p>
+    </div>
   )
 }
 
