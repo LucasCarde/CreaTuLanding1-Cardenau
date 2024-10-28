@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import 'react'
+import { FaShoppingCart } from "react-icons/fa";
+
 
 const CartWidget = ({mensaje}) => {
   return (
-    <div>{mensaje}</div>
+    <p className='carrito'><FaShoppingCart className='logoCarrito'></FaShoppingCart>{mensaje}</p>
   )
 }
 

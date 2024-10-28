@@ -5,10 +5,12 @@ import NavBar from './components/NavBar/Navbar'
 
 function App() {
   const [carrito, setCarrito] = useState(0);
+
   const agregarAlCarrito = () =>{
     setCarrito(carrito+1)
     console.log(carrito)
   }
+  
   const eliminarDelCarrito = () =>{
     carrito!=0?setCarrito(carrito-1):carrito;
     console.log(carrito)

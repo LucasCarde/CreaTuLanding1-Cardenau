@@ -1,10 +1,17 @@
 import 'react'
+import CartWidget from '../CartWidget/CartWidget'
+import { GiConverseShoe } from "react-icons/gi";
+import Link from '../Link/Link';
 
 function NavBar({carrito}){
   return(
-    <div className='navbar'>
-      <h1 id='nombreTienda'>Este es mi NavBar</h1>
-      <p id='logoCarrito'>🛒{carrito}</p>
+    <div id='navbar'>
+      <GiConverseShoe className='logoZapas'/>
+      <h1 className='nombreTienda'>SneakerPoint</h1>
+      <Link mensaje ='Hombre' url=''></Link>
+      <Link mensaje ='Mujer' url=''></Link>
+      <Link mensaje ='Niños' url=''></Link>
+      <CartWidget mensaje = {carrito}></CartWidget>
     </div>
   )
 }
