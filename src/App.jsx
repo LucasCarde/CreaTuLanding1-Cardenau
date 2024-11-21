@@ -4,6 +4,7 @@ import ItemListContainer from './components/itemListContainer/itemListContainer'
 import NavBar from './components/NavBar/Navbar'
 
 function App() {
+  
   const [carrito, setCarrito] = useState(0);
 
   const agregarAlCarrito = () =>{
