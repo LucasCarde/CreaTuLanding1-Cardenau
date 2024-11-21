@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import 'react'
-import Button from '../Button/Button';
 import {getProducts} from '../../Data/fakeBackend';
 import {useEffect, useState} from 'react';
+import ItemList from './ItemList';
 
 const ItemListContainer = ({mensaje, agregarAlCarrito, eliminarDelCarrito}) => {
     const [products, setProducts] = useState([]);
@@ -14,13 +14,9 @@ const ItemListContainer = ({mensaje, agregarAlCarrito, eliminarDelCarrito}) => {
     }, []);
     console.log(products)
     return (
-        <> < h3 > {
-            mensaje
-        }</h3> < Button mensaje = 'Agregar al carrito' fn = {
-            agregarAlCarrito
-        } > </Button>
-    <Button mensaje='Eliminar del carrito' fn={eliminarDelCarrito}></Button>
-</>
+        <> 
+            <ItemList productos = {products} fn={agregarAlCarrito}></ItemList>
+        </>
     )
 }
 
