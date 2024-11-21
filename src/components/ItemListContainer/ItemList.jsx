@@ -3,11 +3,11 @@ import 'react'
 import CartaProducto from '../Card/Card';
 
 const ItemList = ({productos, fn}) => {
-   let prods = productos.map(producto => 
-        <CartaProducto nombre={producto.nombre} img={producto.img} precio={producto.precio} categoria={producto.categoria} fn={fn}></CartaProducto> 
+   let prods = productos.map((producto, index) => 
+        <CartaProducto key={index} producto={producto} fn={fn}></CartaProducto> 
     )
     return (
-        <div className='divProductos'>
+        <div className='divProductos' >
             {prods}
         </div>
     )    

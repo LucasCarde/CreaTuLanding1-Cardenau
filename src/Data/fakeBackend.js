@@ -1,5 +1,4 @@
-const productos = [
-    {
+const productos = [{
         nombre: 'Nike Dunk Low Retro',
         precio: 239.999,
         categoria: 'Zapatillas de Moda para Hombre',
@@ -94,14 +93,14 @@ const productos = [
         precio: 249.999,
         categoria: 'Zapatillas Jordan para Hombre',
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/1077127-1200-1200?width=1200&height=1200&aspect=true'
-    }   
+    }
 ]
 
-export const getProducts = () =>{
+export const getProducts = () => {
     return new Promise((res, rej) => {
         setTimeout(() => {
             res(productos);
             rej('error')
         }, 1);
-    }); 
+    });
 }

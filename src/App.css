@@ -4,6 +4,7 @@
   padding: 2rem;
   padding-top: 5rem;
   text-align: center;
+  position: relative
 }
 
 .logo {
@@ -91,4 +92,8 @@
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 10px; 
+}
+
+.card{
+  position: initial
 }

@@ -10,12 +10,10 @@ const ItemListContainer = ({mensaje, agregarAlCarrito, eliminarDelCarrito}) => {
         getProducts()
             .then(res => setProducts(res))
             .catch(e => console.error(e))
-            . finally(console.log('se resolvio la promesa'))
     }, []);
-    console.log(products)
     return (
         <> 
-            <ItemList productos = {products} fn={agregarAlCarrito}></ItemList>
+            <ItemList productos = {products} fn={agregarAlCarrito} className='listaProductos'></ItemList>
         </>
     )
 }

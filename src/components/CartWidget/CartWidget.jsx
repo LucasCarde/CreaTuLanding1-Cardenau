@@ -3,9 +3,9 @@ import 'react'
 import { FaShoppingCart } from "react-icons/fa";
 
 
-const CartWidget = ({mensaje}) => {
+const CartWidget = ({mensaje, fn}) => {
   return (
-    <p className='carrito'><FaShoppingCart className='logoCarrito'></FaShoppingCart>{mensaje}</p>
+    <p className='carrito' onClick={fn}><FaShoppingCart className='logoCarrito'></FaShoppingCart>{mensaje}</p>
   )
 }
 

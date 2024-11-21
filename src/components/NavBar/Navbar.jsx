@@ -1,7 +1,7 @@
 import 'react'
-import CartWidget from '../CartWidget/CartWidget'
 import { GiConverseShoe } from "react-icons/gi";
 import Link from '../Link/Link';
+import Carrito from '../Dropdown/Dropdown';
 
 function NavBar({carrito}){
   return(
@@ -11,7 +11,7 @@ function NavBar({carrito}){
       <Link mensaje ='Hombre' url=''></Link>
       <Link mensaje ='Mujer' url=''></Link>
       <Link mensaje ='Niños' url=''></Link>
-      <CartWidget mensaje = {carrito}></CartWidget>
+      <Carrito mensaje = {carrito}></Carrito>
     </div>
   )
 }
