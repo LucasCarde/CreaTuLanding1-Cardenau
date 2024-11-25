@@ -1,7 +1,7 @@
 import {useState, useRef} from 'react';
 import Overlay from 'react-bootstrap/Overlay';
 import Popover from 'react-bootstrap/Popover';
-import CartWidget from '../CartWidget/CartWidget';
+import CartWidget from './CartWidget';
 import ProductoCarrito from './ProductoCarrito';
 
 function Carrito({mensaje, productosCarrito, eliminarDelCarrito}) {

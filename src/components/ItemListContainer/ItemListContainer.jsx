@@ -1,21 +1,32 @@
 /* eslint-disable react/prop-types */
 import 'react'
-import {getProducts} from '../../Data/fakeBackend';
+import {getProducts, getProductsBySex} from '../../Data/fakeBackend';
 import {useEffect, useState} from 'react';
 import ItemList from './ItemList';
 
-const ItemListContainer = ({mensaje, agregarAlCarrito, eliminarDelCarrito}) => {
+const ItemListContainer = (
+    {mensaje, agregarAlCarrito, eliminarDelCarrito, sexo}
+) => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        getProducts()
-            .then(res => setProducts(res))
-            .catch(e => console.error(e))
-    }, []);
-    return (
-        <> 
-            <ItemList productos = {products} fn={agregarAlCarrito} className='listaProductos'></ItemList>
-        </>
-    )
+        if (sexo) {
+            getProductsBySex(sexo)
+                .then(res => setProducts(res))
+                .catch(e => console.error(e))
+            } else {
+            getProducts()
+                .then(res => setProducts(res))
+                .catch(e => console.error(e))
+            }
+    }, [sexo]);
+    return (<> < ItemList productos = {
+        products
+    }
+    fn = {
+        agregarAlCarrito
+    }
+    className = 'listaProductos' > </ItemList>
+</>)
 }
 
 export default ItemListContainer;

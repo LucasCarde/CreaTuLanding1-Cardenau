@@ -10,6 +10,11 @@ function App() {
   
   const [carrito, setCarrito] = useState(0);
   const [itemsCarrito, setItemsCarrito] = useState([])
+  const [sexo, setSexo] = useState('');
+
+  const changeSexo = (sex) => {
+    setSexo(sex)
+  }
 
   const agregarAlCarrito = (producto) => {
     setCarrito(carrito+1)
@@ -27,8 +32,8 @@ function App() {
     
     return (
         <> 
-          <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito}></NavBar>
-          <ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito}></ItemListContainer>
+          <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito} changeSexo = {changeSexo}></NavBar>
+          <ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito} sexo={sexo}></ItemListContainer>
         </>
 
     )
