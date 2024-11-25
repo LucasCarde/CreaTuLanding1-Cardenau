@@ -5,7 +5,7 @@ const productos = [{
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&height=1200&aspect=true'
     },
     {
-        nombre: 'Nike SB Dunk Low Pro Premium',
+        nombre: 'Dunk Low Pro Premium',
         precio: 229.999,
         categoria: 'Zapatillas de Moda Unisex',
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/996792-1200-1200?width=1200&height=1200&aspect=true'
@@ -29,7 +29,7 @@ const productos = [{
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&height=1200&aspect=true'
     },
     {
-        nombre: 'Nike SB Dunk Low Pro Premium',
+        nombre: 'Dunk Low Pro Premium',
         precio: 229.999,
         categoria: 'Zapatillas de Moda Unisex',
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/996792-1200-1200?width=1200&height=1200&aspect=true'
@@ -53,7 +53,7 @@ const productos = [{
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&height=1200&aspect=true'
     },
     {
-        nombre: 'Nike SB Dunk Low Pro Premium',
+        nombre: 'Dunk Low Pro Premium',
         precio: 229.999,
         categoria: 'Zapatillas de Moda Unisex',
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/996792-1200-1200?width=1200&height=1200&aspect=true'
@@ -77,7 +77,7 @@ const productos = [{
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&height=1200&aspect=true'
     },
     {
-        nombre: 'Nike SB Dunk Low Pro Premium',
+        nombre: 'Dunk Low Pro Premium',
         precio: 229.999,
         categoria: 'Zapatillas de Moda Unisex',
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/996792-1200-1200?width=1200&height=1200&aspect=true'

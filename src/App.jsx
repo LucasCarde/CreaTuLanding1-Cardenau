@@ -18,15 +18,17 @@ function App() {
     console.log(itemsCarrito)
   }
   
-  const eliminarDelCarrito = () =>{
+  const eliminarDelCarrito = (index) =>{
+    itemsCarrito.splice(index, 1)
+    setItemsCarrito(itemsCarrito)
     carrito!=0?setCarrito(carrito-1):carrito;
     console.log(carrito)
   }
     
     return (
         <> 
-          <NavBar carrito = {carrito}></NavBar>
-          <ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito} eliminarDelCarrito = {eliminarDelCarrito}></ItemListContainer>
+          <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito}></NavBar>
+          <ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito}></ItemListContainer>
         </>
 
     )

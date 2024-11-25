@@ -1,9 +1,9 @@
 import 'react'
 import { GiConverseShoe } from "react-icons/gi";
 import Link from '../Link/Link';
-import Carrito from '../Dropdown/Dropdown';
+import Carrito from '../Carrito/Carrito';
 
-function NavBar({carrito}){
+function NavBar({carrito, productosCarrito, eliminarDelCarrito}){
   return(
     <div id='navbar'>
       <GiConverseShoe className='logoZapas'/>
@@ -11,7 +11,7 @@ function NavBar({carrito}){
       <Link mensaje ='Hombre' url=''></Link>
       <Link mensaje ='Mujer' url=''></Link>
       <Link mensaje ='Niños' url=''></Link>
-      <Carrito mensaje = {carrito}></Carrito>
+      <Carrito mensaje = {carrito} productosCarrito = {productosCarrito} eliminarDelCarrito={eliminarDelCarrito}></Carrito>
     </div>
   )
 }

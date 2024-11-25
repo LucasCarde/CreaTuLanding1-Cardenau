@@ -4,7 +4,8 @@
   padding: 2rem;
   padding-top: 5rem;
   text-align: center;
-  position: relative
+  position: relative;
+  background-color: #F1F0E8;
 }
 
 .logo {
