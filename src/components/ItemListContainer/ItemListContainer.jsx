@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import 'react'
 import {getProducts, getProductsBySex} from '../../Data/fakeBackend';
 import {useEffect, useState} from 'react';
