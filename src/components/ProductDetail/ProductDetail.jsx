@@ -10,14 +10,8 @@ const ProductDetail = () => {
     },[])
 
   return (
-    // id: 1,
-    //     nombre: 'Dunk Low Retro',
-    //     precio: 239.999,
-    //     categoria: 'Zapatillas de Moda para Hombre',
-    //     sexo: 'hombre',
-    //     img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&he' +
-    //             'ight=1200&aspect=true'
     <>
+    <img src={product.img} className='imgDetail'></img>
     <h1>{product.nombre}</h1>
     <p>{product.precio}</p>
     <p>{product.categoria}</p>
