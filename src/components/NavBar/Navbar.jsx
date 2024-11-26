@@ -10,10 +10,10 @@ function NavBar({carrito, productosCarrito, eliminarDelCarrito, changeSexo}){
       <Link to='/' className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
         <GiConverseShoe className='logoZapas' onClick={()=>changeSexo('')}/>
         <h1 className='nombreTienda' onClick={()=>changeSexo('')}>SneakerPoint</h1>
+        <a onClick={()=>changeSexo('unisex')}><Filtro mensaje ='Unisex'/></a>
+        <a onClick={()=>changeSexo('mujer')}><Filtro mensaje ='Mujer'/></a>
+        <a onClick={()=>changeSexo('hombre')}><Filtro mensaje ='Hombre'/></a>
       </Link>
-      <a onClick={()=>changeSexo('hombre')}><Filtro mensaje ='Hombre'/></a>
-      <a onClick={()=>changeSexo('mujer')}><Filtro mensaje ='Mujer'/></a>
-      <a onClick={()=>changeSexo('unisex')}><Filtro mensaje ='Unisex'/></a>
       <Carrito mensaje = {carrito} productosCarrito = {productosCarrito} eliminarDelCarrito={eliminarDelCarrito}></Carrito>
     </div>
   )

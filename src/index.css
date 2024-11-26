@@ -49,25 +49,9 @@ button {
 }
 button:hover {
   border-color: #646cff;
+  background-color: #545353;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #F1F0E8;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #bebbb5;
-  }
-  button:hover {
-    background-color: #cec9be;
-    border-color: #cec9be;
-  }
 }
