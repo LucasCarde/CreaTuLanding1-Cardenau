@@ -4,7 +4,7 @@ import CartaProducto from '../Card/Card';
 
 const ItemList = ({productos, fn}) => {
    let prods = productos.map((producto, index) => 
-        <CartaProducto key={index} producto={producto} fn={fn}></CartaProducto> 
+            <CartaProducto key={index} producto={producto} fn={fn}></CartaProducto>
     )
     return (
         <div className='divProductos' >

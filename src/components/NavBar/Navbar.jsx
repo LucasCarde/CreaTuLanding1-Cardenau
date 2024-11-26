@@ -1,16 +1,19 @@
 import 'react'
 import { GiConverseShoe } from "react-icons/gi";
-import Link from '../Link/Link';
+import Filtro from '../Filtro/Filtro';
 import Carrito from '../Carrito/Carrito';
+import {Link} from 'react-router-dom'
 
 function NavBar({carrito, productosCarrito, eliminarDelCarrito, changeSexo}){
   return(
     <div id='navbar'>
-      <GiConverseShoe className='logoZapas' onClick={()=>changeSexo('')}/>
-      <h1 className='nombreTienda' onClick={()=>changeSexo('')}>SneakerPoint</h1>
-      <a onClick={()=>changeSexo('hombre')}><Link mensaje ='Hombre'/></a>
-      <a onClick={()=>changeSexo('mujer')}><Link mensaje ='Mujer'/></a>
-      <a onClick={()=>changeSexo('unisex')}><Link mensaje ='Unisex'/></a>
+      <Link to='/' className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
+        <GiConverseShoe className='logoZapas' onClick={()=>changeSexo('')}/>
+        <h1 className='nombreTienda' onClick={()=>changeSexo('')}>SneakerPoint</h1>
+      </Link>
+      <a onClick={()=>changeSexo('hombre')}><Filtro mensaje ='Hombre'/></a>
+      <a onClick={()=>changeSexo('mujer')}><Filtro mensaje ='Mujer'/></a>
+      <a onClick={()=>changeSexo('unisex')}><Filtro mensaje ='Unisex'/></a>
       <Carrito mensaje = {carrito} productosCarrito = {productosCarrito} eliminarDelCarrito={eliminarDelCarrito}></Carrito>
     </div>
   )

@@ -2,9 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 import NavBar from './components/NavBar/Navbar'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
-
-
 
 function App() {
   
@@ -32,8 +31,14 @@ function App() {
     
     return (
         <> 
-          <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito} changeSexo = {changeSexo}></NavBar>
-          <ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito} sexo={sexo}></ItemListContainer>
+          <BrowserRouter>
+            <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito} changeSexo = {changeSexo}/>
+            <Routes>
+              <Route exact path='/' element={<ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito} sexo={sexo}/>}/>
+              <Route exact path='/carrito' element={<></>}/>
+              <Route exact path='/producto' element={<></>}/>
+            </Routes>
+          </BrowserRouter>
         </>
 
     )
