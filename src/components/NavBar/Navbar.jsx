@@ -10,11 +10,17 @@ function NavBar({carrito, productosCarrito, eliminarDelCarrito, changeSexo}){
       <Link to='/' className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
         <GiConverseShoe className='logoZapas' onClick={()=>changeSexo('')}/>
         <h1 className='nombreTienda' onClick={()=>changeSexo('')}>SneakerPoint</h1>
-        <a onClick={()=>changeSexo('unisex')}><Filtro mensaje ='Unisex'/></a>
-        <a onClick={()=>changeSexo('mujer')}><Filtro mensaje ='Mujer'/></a>
+      </Link>
+      <Link to='categoria/hombre' className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
         <a onClick={()=>changeSexo('hombre')}><Filtro mensaje ='Hombre'/></a>
       </Link>
-      <Carrito mensaje = {carrito} productosCarrito = {productosCarrito} eliminarDelCarrito={eliminarDelCarrito}></Carrito>
+      <Link to='categoria/mujer' className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
+        <a onClick={()=>changeSexo('mujer')}><Filtro mensaje ='Mujer'/></a>
+      </Link>
+      <Link to='categoria/unisex' className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
+        <a onClick={()=>changeSexo('unisex')}><Filtro mensaje ='Unisex'/></a>
+      </Link>
+        <Carrito mensaje = {carrito} productosCarrito = {productosCarrito} eliminarDelCarrito={eliminarDelCarrito}></Carrito>
     </div>
   )
 }
