@@ -35,7 +35,7 @@ function App() {
           <BrowserRouter>
             <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito} changeSexo = {changeSexo}/>
             <Routes>
-              <Route exact path='/' element={<ItemListContainer mensaje ='Bienvenidos!' agregarAlCarrito = {agregarAlCarrito} sexo={sexo}/>}/>
+              <Route exact path='/' element={<ItemListContainer agregarAlCarrito = {agregarAlCarrito} sexo={sexo}/>}/>
               <Route exact path='/carrito' element={<></>}/>
               <Route exact path='/:id' element={<ProductDetail/>}/>
             </Routes>

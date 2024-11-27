@@ -3,7 +3,7 @@ import {getProducts, getProductsBySex} from '../../Data/fakeBackend';
 import {useEffect, useState} from 'react';
 import ItemList from './ItemList';
 
-const ItemListContainer = ({mensaje, agregarAlCarrito, eliminarDelCarrito, sexo}) => {
+const ItemListContainer = ({agregarAlCarrito, eliminarDelCarrito, sexo}) => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         if (sexo) {

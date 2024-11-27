@@ -13,9 +13,9 @@ const ProductDetail = () => {
     <>
     <img src={product.img} className='imgDetail'></img>
     <h1>{product.nombre}</h1>
-    <p>{product.precio}</p>
+    <p>${product.precio}</p>
     <p>{product.categoria}</p>
-    <p>{product.sexo}</p>
+    {/* <p>{product.sexo}</p> */}
     </>
 
   )
