@@ -127,7 +127,52 @@ const productos = [
         sexo: 'mujer',
         img: 'https://nikearprod.vtexassets.com/arquivos/ids/1140173-1200-1200?width=1200&he' +
                 'ight=1200&aspect=true'
-    }
+    },
+    {
+        id: 17,
+        nombre: 'Jordan 11 Retro',
+        precio: 230999,
+        categoria: 'Zapatillas Hombre',
+        sexo: 'hombre',
+        img: 'https://static.nike.com/a/images/w_1280,q_auto,f_auto/no4chctl7npzsn5bhqdt/air-jordan-11-retro-legend-blue-release-date.jpg'
+    },
+    // {
+    //     id: 18,
+    //     nombre: 'Air Force 1',
+    //     precio: 135999,
+    //     categoria: 'Zapatillas Mujer',
+    //     sexo: 'mujer',
+    //     img: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/air-force-1-shadow.jpg'
+    // }, {
+    //     id: 19,
+    //     nombre: 'Zoom Vomero',
+    //     precio: 180999,
+    //     categoria: 'Zapatillas Mujer',
+    //     sexo: 'mujer',
+    //     img: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/zoom-vomero.jpg'
+    // }, {
+    //     id: 20,
+    //     nombre: 'Metcon 6',
+    //     precio: 130999,
+    //     categoria: 'Entrenamiento Mujer',
+    //     sexo: 'mujer',
+    //     img: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/metcon-6-premium.jpg'
+    // }, {
+    //     id: 21,
+    //     nombre: 'Pegasus PRM',
+    //     precio: 149999,
+    //     categoria: 'Running Mujer',
+    //     sexo: 'mujer',
+    //     img: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/pegasus-41-prm.jpg'
+    // }, {
+    //     id: 22,
+    //     nombre: 'Dunk Low SE',
+    //     precio: 120999,
+    //     categoria: 'Zapatillas Mujer',
+    //     sexo: 'mujer',
+    //     img: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/dunk-low-se.jpg'
+    // }
+    
 ];
 
 export const getProducts = () => {
