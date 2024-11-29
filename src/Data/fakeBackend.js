@@ -135,8 +135,8 @@ const productos = [
         categoria: 'Zapatillas Hombre',
         sexo: 'hombre',
         img: 'https://static.nike.com/a/images/w_1280,q_auto,f_auto/no4chctl7npzsn5bhqdt/air-jordan-11-retro-legend-blue-release-date.jpg'
-    },
-    // {
+    }
+    // ,{
     //     id: 18,
     //     nombre: 'Air Force 1',
     //     precio: 135999,

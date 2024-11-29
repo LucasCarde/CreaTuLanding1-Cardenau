@@ -110,8 +110,11 @@ body{
   margin-bottom: 10px;
 }
 
-.imgDetail{
-  width: 20%;
+.cardProducto{
+  width: 18rem; 
+  padding: 30px 10px; 
+  background-color:'#E5E1DA'; 
+  border-radius:10px
 }
 
 @media only screen and (max-width: 768px) {
@@ -120,31 +123,5 @@ body{
   }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: rgb(241, 240, 232);
-  color: rgb(33, 37, 41);
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin: 5px;
-}
-button:hover {
-  border-color: #646cff;
-  background-color: rgb(218, 215, 194);
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-.cardProducto{
-  width: 18rem; 
-  padding: 30px 10px; 
-  background-color:'#E5E1DA'; 
-  border-radius:10px
-}
+

@@ -15,7 +15,7 @@ function CartaProducto({producto, fn}) {
           <Card.Title>{producto.nombre}</Card.Title>
           <Card.Text className='textProductCard'>{producto.categoria}</Card.Text>
         </Link>
-        <Button variant="primary" mensaje='Agregar al carrito' fn={fn} prod={producto}></Button>
+        <Button variant="primary" mensaje='Agregar al carrito' fn={fn} prod={producto} className='cardButton'></Button>
       </Card.Body>
     </Card>
   );

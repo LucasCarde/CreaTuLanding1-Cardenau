@@ -5,6 +5,8 @@ import NavBar from './components/NavBar/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
 import './App.css'
+import '.././src/components/ProductDetail/productDetail.css'
+
 
 function App() {
   
@@ -38,7 +40,7 @@ function App() {
               <Route exact path='/' element={<ItemListContainer agregarAlCarrito = {agregarAlCarrito} sexo={sexo}/>}/>
               <Route exact path='categoria/:sexo' element={<ItemListContainer agregarAlCarrito = {agregarAlCarrito} sexo={sexo}/>}/>
               <Route exact path='/carrito' element={<></>}/>
-              <Route exact path='producto/:id' element={<ProductDetail/>}/>
+              <Route exact path='producto/:id' element={<ProductDetail agregarAlCarrito = {agregarAlCarrito}/>}/>
             </Routes>
           </BrowserRouter>
         </>
