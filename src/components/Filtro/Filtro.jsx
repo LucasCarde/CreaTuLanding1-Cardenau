@@ -1,7 +1,7 @@
 import 'react'
 
 const Filtro = ({url, mensaje}) => {
-    return (<a href={url} className='filtros'>{mensaje}</a>)
+    return (<p href={url} className='filtros'>{mensaje}</p>)
 }
 
 export default Filtro
