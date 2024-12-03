@@ -7,11 +7,11 @@ function CartaProducto({producto, fn}) {
   return (
     <Card className='cardProducto'>
       
-      <Link to={`/producto/${producto.id}`} className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
+      <Link to={`/producto/${producto.id}`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
       <Card.Img  id='imgProductos' variant="top" src={producto.img} style={{ height: '250px', objectFit: 'cover', borderRadius:'10px'}}/>
       </Link>
       <Card.Body>
-        <Link to={`/producto/${producto.id}`} className='links' style={{'text-decoration': 'none', color: 'inherit'}}>
+        <Link to={`/producto/${producto.id}`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
           <Card.Title>{producto.nombre}</Card.Title>
           <Card.Text className='textProductCard'>{producto.categoria}</Card.Text>
         </Link>
