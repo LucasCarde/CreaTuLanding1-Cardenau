@@ -5,8 +5,7 @@ const productos = [
         precio: 239.999,
         categoria: 'Zapatillas de Moda para Hombre',
         sexo: 'hombre',
-        img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&he' +
-                'ight=1200&aspect=true'
+        img: 'https://nikearprod.vtexassets.com/arquivos/ids/1054908-1200-1200?width=1200&height=1200&aspect=true'
     }, {
         id: 2,
         nombre: 'Dunk Low Pro Premium',

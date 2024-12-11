@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 import NavBar from './components/NavBar/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
+import {getSingleProduct} from './firebase/firebase.js'
 import './App.css'
 import '.././src/components/ProductDetail/productDetail.css'
 
