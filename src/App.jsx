@@ -7,35 +7,23 @@ import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
 import './App.css'
 import '.././src/components/ProductDetail/productDetail.css'
 import { ProductsProvider } from './context/ProductsContext.jsx';
+import { CartProvider } from './context/CartContext.jsx';
+
 
 function App() {
-  
-  const [carrito, setCarrito] = useState(0);
-  const [itemsCarrito, setItemsCarrito] = useState([])
-
-  const agregarAlCarrito = (producto) => {
-    setCarrito(carrito+1)
-    itemsCarrito.push(producto)
-    setItemsCarrito(itemsCarrito)
-  }
-  
-  const eliminarDelCarrito = (index) =>{
-    itemsCarrito.splice(index, 1)
-    setItemsCarrito(itemsCarrito)
-    carrito!=0?setCarrito(carrito-1):carrito;
-  }
-    
     return (
         <>
-          <BrowserRouter>
-              <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito}/>
-              <Routes>
-                <Route exact path='/' element={<ProductsProvider> <ItemListContainer agregarAlCarrito = {agregarAlCarrito}/></ProductsProvider>}/>
-                <Route exact path='categoria/:sexo' element={<ProductsProvider> <ItemListContainer agregarAlCarrito = {agregarAlCarrito}/></ProductsProvider>}/>
-                <Route exact path='/carrito' element={<></>}/>
-                <Route exact path='producto/:id' element={<ProductDetail agregarAlCarrito = {agregarAlCarrito}/>}/>
-              </Routes>
-          </BrowserRouter>
+        <BrowserRouter>
+              <CartProvider>
+                <NavBar/>
+                <Routes>
+                    <Route exact path='/' element={<ProductsProvider><ItemListContainer /></ProductsProvider>}/>
+                    <Route exact path='categoria/:sexo' element={<ProductsProvider> <ItemListContainer /></ProductsProvider>}/>
+                    <Route exact path='/carrito' element={<></>}/>
+                    <Route exact path='producto/:id' element={<ProductsProvider><ProductDetail /></ProductsProvider>}/>
+                </Routes>
+              </CartProvider>
+        </BrowserRouter>
         </>
 
     )

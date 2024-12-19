@@ -4,7 +4,8 @@ import Filtro from '../Filtro/Filtro';
 import Carrito from '../Carrito/Carrito';
 import {Link} from 'react-router-dom'
 
-function NavBar({carrito, productosCarrito, eliminarDelCarrito}){
+function NavBar(){
+
   return(
     <div id='navbar'>
       <Link to='/' className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
@@ -20,7 +21,7 @@ function NavBar({carrito, productosCarrito, eliminarDelCarrito}){
       <Link to='categoria/unisex' className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
         <Filtro mensaje ='Unisex'/>
       </Link>
-        <Carrito mensaje = {carrito} productosCarrito = {productosCarrito} eliminarDelCarrito={eliminarDelCarrito}></Carrito>
+        <Carrito></Carrito>
     </div>
   )
 }

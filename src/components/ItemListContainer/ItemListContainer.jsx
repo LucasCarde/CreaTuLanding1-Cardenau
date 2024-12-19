@@ -5,13 +5,13 @@ import {useEffect, useState, useContext} from 'react';
 import ItemList from './ItemList';
 import {ProductsContext} from '../../context/ProductsContext';
 
-const ItemListContainer = ({agregarAlCarrito}) => {
+const ItemListContainer = () => {
     const [products, setProducts, loading, sexo] = useContext(ProductsContext);
 
     return (<> 
     {   
         loading? (<p>Cargando...</p>):(
-        < ItemList productos = { products } fn = { agregarAlCarrito } className = 'listaProductos' /> 
+        < ItemList productos = { products } className = 'listaProductos' /> 
             )
     } 
     </>)

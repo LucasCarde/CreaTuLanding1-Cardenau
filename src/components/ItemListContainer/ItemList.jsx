@@ -2,9 +2,9 @@
 import 'react'
 import CartaProducto from '../Card/Card';
 
-const ItemList = ({productos, fn}) => {
+const ItemList = ({productos}) => {
     let prods = productos.map(
-        (producto, index) => <CartaProducto key={index} producto={producto} fn={fn}></CartaProducto>
+        (producto, index) => <CartaProducto key={index} producto={producto}></CartaProducto>
     )
     return (<div className='divProductos'>
         {prods}

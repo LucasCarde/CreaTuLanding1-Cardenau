@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaTrash } from "react-icons/fa";
+import { CartContext } from '../../context/CartContext';
 
-const BotonEliminar = ({eliminarDelCarrito, index}) => {
+const BotonEliminar = ({index}) => {
+  const [cart, cartLength, agregarAlCarrito, eliminarDelCarrito] = useContext(CartContext)
+    const handleClick = () => {
+      eliminarDelCarrito(index)
+    }
+
   return (
-    <a style={{float: 'right', 'margin-left' : '15px'}} onClick={()=>eliminarDelCarrito(index)}><FaTrash /></a>
+    <a style={{float: 'right', 'marginLeft' : '15px'}} onClick={handleClick}><FaTrash /></a>
   )
 }
 
