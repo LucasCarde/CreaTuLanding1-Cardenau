@@ -4,10 +4,9 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 import NavBar from './components/NavBar/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
-import {getSingleProduct} from './firebase/firebase.js'
 import './App.css'
 import '.././src/components/ProductDetail/productDetail.css'
-
+import { ProductsProvider } from './context/ProductsContext.jsx';
 
 function App() {
   
@@ -27,15 +26,15 @@ function App() {
   }
     
     return (
-        <> 
+        <>
           <BrowserRouter>
-            <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito}/>
-            <Routes>
-              <Route exact path='/' element={<ItemListContainer agregarAlCarrito = {agregarAlCarrito}/>}/>
-              <Route exact path='categoria/:sexo' element={<ItemListContainer agregarAlCarrito = {agregarAlCarrito}/>}/>
-              <Route exact path='/carrito' element={<></>}/>
-              <Route exact path='producto/:id' element={<ProductDetail agregarAlCarrito = {agregarAlCarrito}/>}/>
-            </Routes>
+              <NavBar carrito = {carrito} productosCarrito = {itemsCarrito} eliminarDelCarrito={eliminarDelCarrito}/>
+              <Routes>
+                <Route exact path='/' element={<ProductsProvider> <ItemListContainer agregarAlCarrito = {agregarAlCarrito}/></ProductsProvider>}/>
+                <Route exact path='categoria/:sexo' element={<ProductsProvider> <ItemListContainer agregarAlCarrito = {agregarAlCarrito}/></ProductsProvider>}/>
+                <Route exact path='/carrito' element={<></>}/>
+                <Route exact path='producto/:id' element={<ProductDetail agregarAlCarrito = {agregarAlCarrito}/>}/>
+              </Routes>
           </BrowserRouter>
         </>
 

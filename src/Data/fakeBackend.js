@@ -179,7 +179,7 @@ export const getProducts = () => {
         setTimeout(() => {
             res(productos);
             rej('error')
-        }, 1);
+        }, 500);
     });
 }
 
@@ -188,7 +188,7 @@ export const getProductsBySex = (sexo) => {
         setTimeout(() => {
             res(productos.filter(producto => producto.sexo == sexo));
             rej('error')
-        }, 1);
+        }, 500);
     });
 }
 
