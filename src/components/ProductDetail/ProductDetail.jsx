@@ -1,6 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
 import {useParams} from 'react-router-dom'
-import {getProductById} from '../../Data/fakeBackend';
 import Button from '../Button/Button';
 import './productDetail.css'
 import {CartContext} from '../../context/CartContext';
