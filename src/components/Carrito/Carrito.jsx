@@ -6,7 +6,7 @@ import ProductoCarrito from './ProductoCarrito';
 import { CartContext } from '../../context/CartContext';
 
 function Carrito() {
-    const [cart, cartLength, agregarAlCarrito, eliminarDelCarrito] = useContext(CartContext)
+    const [cart, cartLength, , , , , , , ,total] = useContext(CartContext)
     const [show, setShow] = useState(false);
     const [target, setTarget] = useState(null);
     const ref = useRef(null);
@@ -31,7 +31,7 @@ function Carrito() {
                         backgroundColor: 'rgb(229, 225, 218)',
                         position: 'relative'
                     }}>
-                    <Popover.Header as="h3">Carrito</Popover.Header>
+                    <Popover.Header as="h3">Total en el carrito ${total}</Popover.Header>
                     {
                         cartLength < 1
                             ?   <Popover.Body style={{ 'minWidth' : '280px' }}>
