@@ -20,7 +20,7 @@ function CartaProducto({producto}) {
       <Card.Body>
         <Link to={`/producto/${producto.id}`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
           <Card.Title>{producto.nombre}</Card.Title>
-          <Card.Text className='textProductCard'>{producto.categoria}</Card.Text>
+          <Card.Text className='textProductCard'>${producto.precio}</Card.Text>
         </Link>
         <Button variant="primary" mensaje='Agregar al carrito' fn={handleClick} prod={producto} className='cardButton'></Button>
       </Card.Body>

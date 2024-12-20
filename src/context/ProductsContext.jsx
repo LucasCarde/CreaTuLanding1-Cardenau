@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from 'react';
-import {getProducts, getProductsBySex} from '../Data/fakeBackend';
+import { getProducts, filterProductsBySex } from '../firebase/firebase';
 import {useParams} from 'react-router-dom';
 
 export const ProductsContext = createContext(false);
@@ -12,7 +12,7 @@ export function ProductsProvider({children}) {
     useEffect(() => {
       setLoading(true)
         if (sexo != undefined) {
-            getProductsBySex(sexo)
+            filterProductsBySex(sexo)
                 .then(res => {
                     setProducts(res)
                     setLoading(false)

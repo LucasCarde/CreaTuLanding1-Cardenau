@@ -48,7 +48,7 @@ export async function getSingleProduct(id) {
 //obtener toda una coleccion
 export async function getProducts() {
     try {
-        const querySnapshot = await getDocs(collection(db, 'products'));
+        const querySnapshot = await getDocs(collection(db, 'productos'));
         if (querySnapshot.size !== 0) {
             const productsList = querySnapshot
                 .docs
@@ -68,11 +68,11 @@ export async function getProducts() {
 }
 
 //filtros de precio
-export async function filterProductsByPrice(price) {
+export async function filterProductsBySex(sex) {
     try {
         const filteredQuery = query(
-            collection(db, 'products'),
-            where('price', '<', price)
+            collection(db, 'productos'),
+            where('sexo', '==', sex)
         );
         const querySnapshot = await getDocs(filteredQuery);
         if (querySnapshot.size !== 0) {

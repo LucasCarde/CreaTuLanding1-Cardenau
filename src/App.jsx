@@ -13,7 +13,7 @@ import { CartProvider } from './context/CartContext.jsx';
 function App() {
     return (
         <>
-        <BrowserRouter>
+            <BrowserRouter>
               <CartProvider>
                 <NavBar/>
                 <Routes>
@@ -23,7 +23,7 @@ function App() {
                     <Route exact path='producto/:id' element={<ProductsProvider><ProductDetail /></ProductsProvider>}/>
                 </Routes>
               </CartProvider>
-        </BrowserRouter>
+            </BrowserRouter>
         </>
 
     )
