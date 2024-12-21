@@ -25,7 +25,7 @@ const ProductDetail = () => {
 
     return (
         <div className='productDetail'>
-        {product && (
+        {product ? (
             <>
                 <img src={product.img} className='imgDetail'></img>
                 <h1 className='productTitle'>{product.nombre}</h1>
@@ -39,7 +39,7 @@ const ProductDetail = () => {
                     prod={product}
                     className='detailButton'></Button>
             </>
-        )}
+        ): (<p>Cargando...</p>)}
         </div>
     )
 }

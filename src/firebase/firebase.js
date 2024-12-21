@@ -34,7 +34,10 @@ export async function getSingleProduct(id) {
     try {
         const snapshot = await getDoc(documentRef);
         if (snapshot.exists()) {
-            return snapshot.data();
+            return {
+                id: snapshot.id,
+                ...snapshot.data()
+            };
         } else {
             console.log('El documento no existe!');
         }

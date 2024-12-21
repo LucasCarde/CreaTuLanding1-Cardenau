@@ -11,20 +11,31 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
         let totalAct = 0
-        cart.map(producto => totalAct+=producto.precio)
+        cart.map(producto => totalAct+=(producto.precio*producto.cantidad))
         setTotal(totalAct)
       }, [cart, total]);
-  
-  
-  const agregarAlCarrito = (producto, cantidad) => {
-    setCart((cart) => [
-      ...cart,
-      ...Array(cantidad).fill(producto)
-    ]);
-    setCantidad(1)
-    setMostrarContador(false)
+
+  const agregarAlCarrito = (producto, cantidad = 1) => {
+    let verificaStock = producto.cantidad? (producto.cantidad + cantidad)>5 : cantidad>5;
+    verificaStock? console.log('No hay stock suficiente'):
+    (setCart((cart) => {
+      const productoExistente = cart.find(item => item.id === producto.id);
+      if (productoExistente) {
+        return cart.map(item =>
+          item.id === producto.id
+            ? { ...item, cantidad: item.cantidad? item.cantidad + cantidad: cantidad }
+            : item
+        );
+      } else {
+        return [...cart, { ...producto, cantidad }];
+      }
+    }));
+    setCantidad(1);
+    setMostrarContador(false);
+    console.log(cart);
   };
   
+
   const eliminarDelCarrito = (indice) =>{
     setCart(cart.filter((producto, index) => index !== indice ))
   }
