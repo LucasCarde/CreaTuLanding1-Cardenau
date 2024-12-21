@@ -11,6 +11,7 @@ const CheckOut = () => {
     const [ ,  ,  , eliminarDelCarrito ,  ,  ,  ,  ,  , , getCartProduct] = useContext(CartContext)
     const [product, setProduct] = useState(null)
     const [orderId, setOrderId] = useState(null);
+    const [cargando, setCargando] = useState(false);
     const [emailForm, setEmail] = useState("");
     const [nombreCompleto, setNombreCompleto] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -20,6 +21,7 @@ const CheckOut = () => {
     }, [id])
 
     const enviarVenta = () => {
+        setCargando(true)
         const newOrder = {
           comprador: {
             email: emailForm,
@@ -38,8 +40,10 @@ const CheckOut = () => {
           ],
           total: product.precio*product.cantidad,
         };
-        console.log(newOrder);
-        sendOrder(newOrder).then((id) => setOrderId(id));
+        sendOrder(newOrder).then((id) => {
+          setOrderId(id)
+          setCargando(false)
+        });
 
       };
 
@@ -50,6 +54,8 @@ const CheckOut = () => {
 
     return (
         <div className='productDetail'>
+        {cargando? <p>Su orden esta siendo procesada...</p>:
+        <>
         {orderId ? (<>
             <p>Su venta fue realizada con exito!</p>
             <p>El id de su compra es {orderId}</p>
@@ -58,7 +64,7 @@ const CheckOut = () => {
                     mensaje='Seguir Comprando'
                     className='detailButton'/></Link>
         </>): 
-        <>{product ? (
+        <> {product ? (
             <>
                 <img src={product.img} className='imgDetail'></img>
                 <h1 className='productTitle'>Comprar {product.cantidad} {product.nombre}</h1>
@@ -72,6 +78,10 @@ const CheckOut = () => {
                 </Link>
             </>): 
         (<p>Cargando...</p>)}</>}
+        </>
+        }
+        
+        
         </div>
     )
 }

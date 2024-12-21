@@ -9,7 +9,7 @@ import {getSingleProduct} from '../../firebase/firebase';
 const ProductDetail = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null)
-    const [cart, cartLength, agregarAlCarrito, eliminarDelCarrito, aumentar, disminuir, cantidad, mostrarContador, setMostrarContador] = useContext(CartContext)
+    const [ ,  , agregarAlCarrito,  ,  ,  , cantidad, mostrarContador, setMostrarContador] = useContext(CartContext)
 
     const handleClick = () => {
         agregarAlCarrito(product, cantidad)
