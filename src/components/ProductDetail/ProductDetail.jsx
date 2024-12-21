@@ -36,7 +36,6 @@ const ProductDetail = () => {
                     variant="primary"
                     mensaje='Agregar al carrito'
                     fn={handleClick}
-                    prod={product}
                     className='detailButton'></Button>
             </>
         ): (<p>Cargando...</p>)}

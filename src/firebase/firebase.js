@@ -96,7 +96,7 @@ export async function filterProductsBySex(sex) {
 
 //agregar una nueva orden de pedido
 export async function sendOrder(order) {
-    const ordersCollection = collection(db, 'orders');
+    const ordersCollection = collection(db, 'ordenes');
     try {
         const docRef = await addDoc(ordersCollection, order);
         return docRef.id;

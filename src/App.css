@@ -123,5 +123,13 @@ body{
   }
 }
 
+#telefonoForm, #emailForm, #nombreCompleto{
+  border: solid 1px lightslategray;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  margin: 5px auto;
+  min-width: 30%;
+}
 
 
