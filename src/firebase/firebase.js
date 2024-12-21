@@ -8,9 +8,7 @@ import {
     collection,
     query,
     where,
-    addDoc,
-    updateDoc,
-    writeBatch
+    addDoc
 } from 'firebase/firestore';
 
 
@@ -46,7 +44,6 @@ export async function getSingleProduct(id) {
     }
 }
 
-//obtener toda una coleccion
 export async function getProducts() {
     try {
         const querySnapshot = await getDocs(collection(db, 'productos'));
@@ -68,7 +65,6 @@ export async function getProducts() {
     }
 }
 
-//filtros de precio
 export async function filterProductsBySex(sex) {
     try {
         const filteredQuery = query(
@@ -94,7 +90,6 @@ export async function filterProductsBySex(sex) {
     }
 }
 
-//agregar una nueva orden de pedido
 export async function sendOrder(order) {
     const ordersCollection = collection(db, 'ordenes');
     try {

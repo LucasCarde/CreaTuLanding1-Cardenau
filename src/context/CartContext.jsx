@@ -19,8 +19,9 @@ export function CartProvider({ children }) {
       }, [cart, total]);
 
   const agregarAlCarrito = (producto, cantidad = 1) => {
-    let verificaStock = producto.cantidad? (producto.cantidad + cantidad)>5 : cantidad>5;
-    verificaStock? console.log('No hay stock suficiente'):
+    const productoExistente = cart.find(item => item.id === producto.id);
+    let verificaStock = (productoExistente && productoExistente.cantidad)? (productoExistente.cantidad + cantidad)>5 : cantidad>5;
+    verificaStock? alert('No hay stock suficiente, solo puedes comprar 5 unidades de este producto.'):
     (setCart((cart) => {
       const productoExistente = cart.find(item => item.id === producto.id);
       if (productoExistente) {

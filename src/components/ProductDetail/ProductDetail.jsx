@@ -33,14 +33,14 @@ const ProductDetail = () => {
                 <p>${product.precio}</p>
                 <p>{product.categoria}</p>
                 {mostrarContador && (<Contador></Contador>)}
+                <Link to={`/`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
+                  <Button variant="primary" mensaje='Seguir comprando' className='detailButton'/>
+                </Link>
                 <Button
                     variant="primary"
                     mensaje='Agregar al carrito'
                     fn={handleClick}
                     className='detailButton'></Button>
-                <Link to={`/`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
-                  <Button variant="primary" mensaje='Seguir comprando' className='detailButton'/>
-                </Link>
             </>
         ): (<CircularProgress />)}
         </div>
