@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { FaTrash } from "react-icons/fa";
 import { CartContext } from '../../context/CartContext';
 
-const BotonEliminar = ({index}) => {
+const BotonEliminar = ({id}) => {
   const [cart, cartLength, agregarAlCarrito, eliminarDelCarrito] = useContext(CartContext)
     const handleClick = () => {
-      eliminarDelCarrito(index)
+      eliminarDelCarrito(id)
     }
 
   return (

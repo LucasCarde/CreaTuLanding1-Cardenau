@@ -11,7 +11,7 @@ const ProductoCarrito = ({producto, index}) => {
                 <strong>{producto.cantidad}x </strong>
                 <strong>{producto.nombre}</strong>
             </Link>
-            <BotonEliminar index={index}></BotonEliminar>
+            <BotonEliminar id={producto.id}></BotonEliminar>
             <Link to={`/carrito/${producto.id}`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
                 <p style={{ float: 'right', 'margin' : 'auto' }}>${producto.precio*producto.cantidad}</p>
             </Link>

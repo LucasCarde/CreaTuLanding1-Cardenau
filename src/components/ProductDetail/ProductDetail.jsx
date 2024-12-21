@@ -1,5 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import Button from '../Button/Button';
 import Contador from '../Button/Contador';
 import './productDetail.css'
@@ -37,6 +37,9 @@ const ProductDetail = () => {
                     mensaje='Agregar al carrito'
                     fn={handleClick}
                     className='detailButton'></Button>
+                <Link to={`/`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
+                  <Button variant="primary" mensaje='Seguir comprando' className='detailButton'/>
+                </Link>
             </>
         ): (<p>Cargando...</p>)}
         </div>

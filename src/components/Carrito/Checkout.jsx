@@ -8,7 +8,7 @@ import {sendOrder} from '../../firebase/firebase';
 
 const CheckOut = () => {
     const {id} = useParams()
-    const [ ,  ,  ,  ,  ,  ,  ,  ,  , , getCartProduct] = useContext(CartContext)
+    const [ ,  ,  , eliminarDelCarrito ,  ,  ,  ,  ,  , , getCartProduct] = useContext(CartContext)
     const [product, setProduct] = useState(null)
     const [orderId, setOrderId] = useState(null);
     const [emailForm, setEmail] = useState("");
@@ -19,7 +19,7 @@ const CheckOut = () => {
          setProduct(getCartProduct(id))
     }, [id])
 
-    const handleClick = () => {
+    const enviarVenta = () => {
         const newOrder = {
           comprador: {
             email: emailForm,
@@ -43,6 +43,11 @@ const CheckOut = () => {
 
       };
 
+    const cancelarCompra = () => {
+      eliminarDelCarrito(product.id)
+
+    }
+
     return (
         <div className='productDetail'>
         {orderId ? (<>
@@ -61,7 +66,10 @@ const CheckOut = () => {
                 <input type="email" placeholder='Email' name="email" id="emailForm" value={emailForm} onChange={(e) => setEmail(e.target.value)}/>
                 <input type="text" placeholder='Nombre' name="nombreCompleto" id="nombreCompleto" value={nombreCompleto} onChange={(e) => setNombreCompleto(e.target.value)}/>
                 <input type="text" placeholder='Telefono' name="telefono" id="telefonoForm" value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
-                <Button variant="primary" mensaje='Comprar' fn={handleClick} className='detailButton'/>
+                <Button variant="primary" mensaje='Comprar' fn={enviarVenta} className='detailButton'/>
+                <Link to={`/`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>
+                  <Button variant="primary" mensaje='Eliminar del carrito' fn={cancelarCompra} className='detailButton'/>
+                </Link>
             </>): 
         (<p>Cargando...</p>)}</>}
         </div>

@@ -42,8 +42,8 @@ export function CartProvider({ children }) {
     return productoExistente
   }
 
-  const eliminarDelCarrito = (indice) =>{
-    setCart(cart.filter((producto, index) => index !== indice ))
+  const eliminarDelCarrito = (id) =>{
+    setCart(cart.filter((producto, index) => producto.id !== id ))
   }
 
   const aumentar = (cantidad) =>{
