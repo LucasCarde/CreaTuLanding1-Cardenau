@@ -3,6 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 import Button from '../Button/Button';
 import {CartContext} from '../../context/CartContext';
 import {sendOrder} from '../../firebase/firebase';
+import { CircularProgress } from '@mui/material';
 
 
 
@@ -54,7 +55,7 @@ const CheckOut = () => {
 
     return (
         <div className='productDetail'>
-        {cargando? <p>Su orden esta siendo procesada...</p>:
+        {cargando? <CircularProgress />:
         <>
         {orderId ? (<>
             <p>Su venta fue realizada con exito!</p>
