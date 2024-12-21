@@ -13,7 +13,7 @@ import CheckOut from './components/Carrito/Checkout.jsx';
 
 function App() {
     return (
-        <>
+      <>
             <BrowserRouter>
               <CartProvider>
                 <NavBar/>

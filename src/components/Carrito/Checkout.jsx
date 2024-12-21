@@ -64,8 +64,7 @@ const CheckOut = () => {
                     mensaje='Seguir Comprando'
                     className='detailButton'/></Link>
         </>): 
-        <> {product ? (
-            <>
+        <> {product ? (<>
                 <img src={product.img} className='imgDetail'></img>
                 <h1 className='productTitle'>Comprar {product.cantidad} {product.nombre}</h1>
                 <p>Precio total ${product.precio*product.cantidad}</p>

@@ -4,13 +4,14 @@ import 'react'
 import {useEffect, useState, useContext} from 'react';
 import ItemList from './ItemList';
 import {ProductsContext} from '../../context/ProductsContext';
+import { CircularProgress } from '@mui/material';
 
 const ItemListContainer = () => {
     const [products, setProducts, loading, sexo] = useContext(ProductsContext);
 
     return (<> 
     {   
-        loading? (<p>Cargando...</p>):(
+        loading? (<CircularProgress />):(
         < ItemList productos = { products } className = 'listaProductos' /> 
             )
     } 

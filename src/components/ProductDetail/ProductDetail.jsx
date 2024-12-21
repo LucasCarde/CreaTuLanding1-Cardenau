@@ -5,6 +5,7 @@ import Contador from '../Button/Contador';
 import './productDetail.css'
 import {CartContext} from '../../context/CartContext';
 import {getSingleProduct} from '../../firebase/firebase';
+import { CircularProgress } from '@mui/material';
 
 const ProductDetail = () => {
     const {id} = useParams();
@@ -41,7 +42,7 @@ const ProductDetail = () => {
                   <Button variant="primary" mensaje='Seguir comprando' className='detailButton'/>
                 </Link>
             </>
-        ): (<p>Cargando...</p>)}
+        ): (<CircularProgress />)}
         </div>
     )
 }
