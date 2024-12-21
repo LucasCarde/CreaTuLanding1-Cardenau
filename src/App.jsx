@@ -8,6 +8,7 @@ import './App.css'
 import '.././src/components/ProductDetail/productDetail.css'
 import { ProductsProvider } from './context/ProductsContext.jsx';
 import { CartProvider } from './context/CartContext.jsx';
+import CheckOut from './components/Carrito/Checkout.jsx';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
                 <Routes>
                     <Route exact path='/' element={<ProductsProvider><ItemListContainer /></ProductsProvider>}/>
                     <Route exact path='categoria/:sexo' element={<ProductsProvider> <ItemListContainer /></ProductsProvider>}/>
-                    <Route exact path='/carrito' element={<></>}/>
+                    <Route exact path='/carrito/:id' element={<CheckOut/>}/>
                     <Route exact path='producto/:id' element={<ProductsProvider><ProductDetail /></ProductsProvider>}/>
                 </Routes>
               </CartProvider>

@@ -18,7 +18,7 @@ function Carrito() {
 
     return (
         <div ref={ref}>
-            <CartWidget mensaje={cart.length} fn={handleClick}></CartWidget>
+            <CartWidget mensaje={cartLength} fn={handleClick}></CartWidget>
             <Overlay
                 show={show}
                 target={target}

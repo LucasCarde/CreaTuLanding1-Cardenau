@@ -7,12 +7,15 @@ export function CartProvider({ children }) {
   const [cantidad, setCantidad] = useState(1)
   const [mostrarContador, setMostrarContador] = useState(true)
   const [total, setTotal] = useState(0)
-  const cartLength = cart.length
+  const [cartLength, setCartLength] = useState(0)
 
   useEffect(() => {
         let totalAct = 0
+        let largoAct = 0
         cart.map(producto => totalAct+=(producto.precio*producto.cantidad))
         setTotal(totalAct)
+        cart.map(producto => largoAct+=(producto.cantidad))
+        setCartLength(largoAct)
       }, [cart, total]);
 
   const agregarAlCarrito = (producto, cantidad = 1) => {
@@ -32,9 +35,12 @@ export function CartProvider({ children }) {
     }));
     setCantidad(1);
     setMostrarContador(false);
-    console.log(cart);
   };
   
+  const getCartProduct = (id) => {
+    const productoExistente = cart.find(item => item.id === id);
+    return productoExistente
+  }
 
   const eliminarDelCarrito = (indice) =>{
     setCart(cart.filter((producto, index) => index !== indice ))
@@ -48,7 +54,7 @@ export function CartProvider({ children }) {
   }
 
   return (
-    <CartContext.Provider value={[cart, cartLength, agregarAlCarrito, eliminarDelCarrito, aumentar, disminuir, cantidad, mostrarContador,setMostrarContador,total]}>
+    <CartContext.Provider value={[cart, cartLength, agregarAlCarrito, eliminarDelCarrito, aumentar, disminuir, cantidad, mostrarContador,setMostrarContador,total, getCartProduct]}>
       {children}
     </CartContext.Provider>
   );
