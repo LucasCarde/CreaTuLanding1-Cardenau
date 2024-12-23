@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import 'react'
 import {FaShoppingCart} from "react-icons/fa";
 

@@ -6,7 +6,7 @@ import { CartContext } from '../../context/CartContext';
 
 
 function CartaProducto({producto}) {
-  const [cart,cartLength, agregarAlCarrito, eliminarDelCarrito] = useContext(CartContext)
+  const [ , , agregarAlCarrito,  ] = useContext(CartContext)
   const handleClick = () => {
     agregarAlCarrito(producto)
   }

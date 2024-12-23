@@ -1,10 +1,10 @@
-import React from 'react'
+import 'react'
 import Popover from 'react-bootstrap/Popover';
 import BotonEliminar from './BotonEliminar';
 import {Link} from 'react-router-dom';
 
 
-const ProductoCarrito = ({producto, index}) => {
+const ProductoCarrito = ({producto}) => {
     return (
         <Popover.Body style={{ 'minWidth' : '280px'}}>
             <Link to={`/carrito/${producto.id}`} className='links' style={{'textDecoration': 'none', color: 'inherit'}}>

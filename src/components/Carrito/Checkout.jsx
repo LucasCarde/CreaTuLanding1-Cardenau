@@ -44,6 +44,7 @@ const CheckOut = () => {
         sendOrder(newOrder).then((id) => {
           setOrderId(id)
           setCargando(false)
+          eliminarDelCarrito(product.id)
         });
 
       };
